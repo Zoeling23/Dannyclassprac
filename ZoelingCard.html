@@ -5,29 +5,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card_Zoeling</title>
+    <title>ProfileCard_Zoeling</title>
+    <script src="https://kit.fontawesome.com/735cab2682.js" crossorigin="anonymous"></script>
     <style>
         * {
-            font-family: MS UI Gothic;
+            font-family: 微軟正黑體, MS UI Gothic;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
+            max-width: 400px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .round {
+            border: 1px solid #29583e;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        button {
+            border: none;
+            background: none;
+            font-size: 24px;
+            color: #8bc34a;
+        }
+
+        button:hover {
+            color: #4CAF50;
+            transform: rotate(22deg)
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            padding: 0.5rem 1rem;
         }
     </style>
 </head>
 
 <body>
-    <div style="width: 600px; height:400px; border: solid 3px burlywood;background-color:white; border-radius: 5px;">
-        <h3 style="padding-left:20px ;">林晏伶<span><i> ZoeLing</i> </span>
+    <div class="card">
+        <img class="round" src="https://i.imgur.com/PTGUcXq.png" alt="user" />
+        <h3 style="padding-left:10px ;color: #29583e;">林晏伶<span> ZoeLing</span>
         </h3>
-        <h4 style="padding-left:20px ;">新鮮的肝</h4>
-        <h5 style="padding-left:20px ;">初入工程師世界</h5>
+        <h4 style="padding-left:10px ;color: #f05226;">新鮮的肝</h4>
+        <h5 style="padding-left:10px ;color: #666666;">初入工程師世界</h5>
+
         <hr>
-        <p style="letter-spacing: 2px;padding-left:20px">
-            PS ★★★★☆<br>
-            AI ★★★★☆<br>
-            C# ★★★☆☆<br>
-            MS SQL ★★★☆☆<br>
-            HTML ★☆☆☆☆<br>
-            CSS ★☆☆☆☆<br>
+        <p style="letter-spacing: 2px;padding-left:20px;color: #666666;">
+            PS <b style="color:#8bc34a ;">★★★★☆</b><br>
+            AI <b style="color:#8bc34a ;">★★★★☆</b><br>
+            C# <b style="color:#8bc34a ;">★★★☆☆</b><br>
+            MS SQL <b style="color:#8bc34a ;">★★★☆☆</b><br>
+            HTML <b style="color:#8bc34a ;">★☆☆☆☆</b><br>
+            CSS <b style="color:#8bc34a ;">★☆☆☆☆</b><br>
         </p>
+        <div class="actions">
+            <button><i class="far fa-heart"></i></button>
+            <button><i class="far fa-envelope"></i></button>
+            <button><i class="fas fa-user-friends"></i></button>
+        </div>
     </div>
 
 </body>
